@@ -1,22 +1,12 @@
 {% extends "layout.html" %}
 
 {% block title %}
-Game Page
+Game Details Page
 {% endblock %}
 
 {% block content %}
-<h1>All games for you</h1>
+<h1>Game Detail Page</h1>
 
-<div class="grid grid-cols-3 gap-4 m-4">
-
-    {% for game in games %}
-        <div class="bg-blue-500 p-5 rounded">
-            <img class="rounded" src="{{game.image.url}}" alt="">
-            <h3 class="text-2xl font-bold">{{game.name}}</h3>
-        </div>
-    {% endfor %}
-
-</div>
 {% endblock %}
 
 {% comment %} <!DOCTYPE html>
