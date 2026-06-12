@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Game Page
+{% endblock %}
+
+{% block content %}
+<h1>All games for you</h1>
+
+<div class="grid grid-cols-3 gap-4 m-4">
+
+    {% for game in games %}
+        <div class="bg-blue-500 p-5 rounded">
+            <img class="rounded" src="{{game.image.url}}" alt="">
+            <h3 class="text-2xl font-bold">{{game.name}}</h3>
+        </div>
+    {% endfor %}
+
+</div>
+{% endblock %}
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Games</title>
+</head>
+<body>
+    <h1>All types of Games are here</h1>
+</body>
+</html> {% endcomment %}
